@@ -18,22 +18,35 @@ We derive a principled framework for encoding prior knowledge of information cou
 
 The paper features several examples of the applicability of the proposed model. The last example, however, is best demonstrated with videos. Thus we have included a set of videos below for complementing the result figures in the paper.
 
-![](assets/fig/face-synthesis.jpg)
-
-Row #1: Frames separated by equal time intervals from a camera run, aligned on the face. Row #2: Each frame independently projected to GAN latent space and reconstructed. Row #3: Frames produced by reconstructing the first and the last frame and linearly interpolating the intermediate frames in GAN latent space. Row #4: Frames produced by reconstructing the first and the last frame, but interpolating the intermediate frames in GAN latent space by our view-aware GP prior. It can be seen that although linear interpolation achieves good quality, the azimuth rotation angle of the face is lost, as expected. With the view-aware prior, the rotation angle is better preserved. Row #5: The per-pixel uncertainty visualized in the form of standard deviation of the prediction at the corresponding time step. Heavier shading indicates higher uncertainty around the mean trajectory.
+We consider the task of face reconstruction using a GAN model. As input we use a video captured with an Apple iPhone (where we also capture the phone pose trajectory using ARKit). After face-alignment, the reconstructed face images using StyleGAN are as follows.
 
 <video width="100%" controls>
   <source src="assets/video/independent-low.mp4" type="video/mp4">
   Your browser does not support the video tag. Download the video <a href="assets/video/independent-low.mp4">here</a>.
 </video>
 
+The reconstructions are of varying quality, the identity seems to vary a bit, and the freeze frames are due to failed reconstructions for some of the frames (nearest neighbour shown in that case; failures mostly due to failing face alignment for tilted faces).
+
+The next video shows the GP interpolation result, where we *only use the first and last frames* in the video and synthesise the rest using a view-aware GP prior in the latent space (using the pose trajectory from ARKit).
+
 <video width="100%" controls>
   <source src="assets/video/gp-interpolation-low.mp4" type="video/mp4">
   Your browser does not support the video tag. Download the video <a href="assets/video/gp-interpolation-low.mp4">here</a>.
 </video>
 
+From the GP model we can also directly get the marginal variance of the latent space predictions. Using sampling, we project that uncertainty to the image space, which is visualized in the video below. The uncertainty is low for the first and last frame (those are the observations!), but higher far from the known inputs.
+
 <video width="100%" controls>
   <source src="assets/video/gp-uncertainty-low.mp4" type="video/mp4">
   Your browser does not support the video tag. Download the video <a href="assets/video/gp-uncertainty-low.mp4">here</a>.
 </video>
+
+Finally, below are a set of frames summarising the differences between the independent, a naive linear, and the GP interpolated views.
+
+![](assets/fig/face-synthesis.jpg)
+
+Row #1: Frames separated by equal time intervals from a camera run, aligned on the face. Row #2: Each frame independently projected to GAN latent space and reconstructed. Row #3: Frames produced by reconstructing the first and the last frame and linearly interpolating the intermediate frames in GAN latent space. Row #4: Frames produced by reconstructing the first and the last frame, but interpolating the intermediate frames in GAN latent space by our view-aware GP prior. It can be seen that although linear interpolation achieves good quality, the azimuth rotation angle of the face is lost, as expected. With the view-aware prior, the rotation angle is better preserved. Row #5: The per-pixel uncertainty visualized in the form of standard deviation of the prediction at the corresponding time step. Heavier shading indicates higher uncertainty around the mean trajectory.
+
+
+
 

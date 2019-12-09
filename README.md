@@ -2,7 +2,7 @@
 
 Project page for:
 
-* Yuxin Hou, Ari Heljakka, and Arno Solin (2019). **Gaussian Process Priors for View-Aware Inference**. [[arXiv preprint]](https://arxiv.org/abs/#)
+* Yuxin Hou, Ari Heljakka, and Arno Solin (2019). **Gaussian Process Priors for View-Aware Inference**. [[arXiv preprint]]( http://arxiv.org/abs/1912.03249)
 
 
 ### Abstract

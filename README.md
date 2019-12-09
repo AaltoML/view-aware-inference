@@ -47,6 +47,7 @@ Finally, below are a set of frames summarising the differences between the indep
 
 Row #1: Frames separated by equal time intervals from a camera run, aligned on the face. Row #2: Each frame independently projected to GAN latent space and reconstructed. Row #3: Frames produced by reconstructing the first and the last frame and linearly interpolating the intermediate frames in GAN latent space. Row #4: Frames produced by reconstructing the first and the last frame, but interpolating the intermediate frames in GAN latent space by our view-aware GP prior. It can be seen that although linear interpolation achieves good quality, the azimuth rotation angle of the face is lost, as expected. With the view-aware prior, the rotation angle is better preserved. Row #5: The per-pixel uncertainty visualized in the form of standard deviation of the prediction at the corresponding time step. Heavier shading indicates higher uncertainty around the mean trajectory.
 
+### Code
 
-
+To be released.
 

@@ -2,12 +2,12 @@
 
 Project page for:
 
-* Yuxin Hou, Ari Heljakka, and Arno Solin (2019). **Gaussian Process Priors for View-Aware Inference**. [[arXiv preprint]]( http://arxiv.org/abs/1912.03249)
+* Yuxin Hou, Ari Heljakka, and Arno Solin (2021). **Gaussian Process Priors for View-Aware Inference**. In *Proceedings of the Thirty-Fifth AAAI Conference on Artificial Intelligence (AAAI-21), to appear*. [[arXiv preprint]](https://arxiv.org/abs/1912.03249)
 
 
 ### Abstract
 
-We derive a principled framework for encoding prior knowledge of information coupling between views or camera poses (translation and orientation) of a single scene. While deep neural networks have become the prominent solution to many tasks in computer vision, some important problems not so well suited for deep models have received less attention. These include uncertainty quantification, auxiliary data fusion, and real-time processing, which are instrumental for delivering practical methods with robust inference. While these are central goals in probabilistic machine learning, there is a tangible gap between the theory and practice of applying probabilistic methods to many modern vision problems. For this, we derive a novel parametric kernel (covariance function) in the pose space, SE(3), that encodes information about input pose relationships into larger models. We show how this soft-prior knowledge can be applied to improve performance on several real vision tasks, such as feature tracking, human face encoding, and view synthesis.
+While frame-independent predictions with deep neural networks have become the prominent solutions to many computer vision tasks, the potential benefits of utilizing correlations between frames have received less attention. Even though probabilistic machine learning provides the ability to encode correlation as prior knowledge for inference, there is a tangible gap between the theory and practice of applying probabilistic methods to modern vision problems. For this, we derive a principled framework to combine information coupling between camera poses (translation and orientation) with deep models. We proposed a novel view kernel that generalizes the standard periodic kernel in SO(3). We show how this soft-prior knowledge can aid several pose-related vision tasks like novel view synthesis and predict arbitrary points in the latent space of generative models, pointing towards a range of new applications for inter-frame reasoning.
 
 ![](assets/fig/view-aware.jpg)
 
@@ -49,5 +49,5 @@ Row #1: Frames separated by equal time intervals from a camera run, aligned on t
 
 ### Code
 
-To be released.
+The current implementation is available in [GitHub](https://github.com/AaltoML/view-aware-inference).
 

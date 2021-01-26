@@ -1,7 +1,7 @@
 # Gaussian Process Priors for View-Aware Inference
 
 Code for the paper:
-* Yuxin Hou, Ari Heljakka, and Arno Solin (2020). **Gaussian Process Priors for View-Aware Inference**. In *Proceedings of the Thirty-Fifth AAAI Conference on Artificial Intelligence (AAAI-21), to appear*. [[arXiv preprint]](https://arxiv.org/abs/1912.03249)
+* Yuxin Hou, Ari Heljakka, and Arno Solin (2021). **Gaussian Process Priors for View-Aware Inference**. In *Proceedings of the Thirty-Fifth AAAI Conference on Artificial Intelligence (AAAI-21), to appear*. [[arXiv preprint]](https://arxiv.org/abs/1912.03249)
 
 Implementation by **Ari Heljakka**. (StyleGAN, perceptual similarity metrics and StyleGAN projection code adapted from [1-3].)
 

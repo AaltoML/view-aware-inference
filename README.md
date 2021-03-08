@@ -41,7 +41,7 @@ First, please download our pre-trained model from [Google Drive](https://drive.g
 
 Then, to test the performance of the original task, run
 ```
-python test_vae.py --data data_chairs.h5 --pose pose60.npy --vae_cfg out/vae/vae.cfg.p \
+python ./gppvae/test_vae.py --data data_chairs.h5 --pose pose60.npy --vae_cfg out/vae/vae.cfg.p \
 --vae_weights ./out/gppvae/weights/vae_weights.00110.pt \
 --gp_weights ./out/gppvae/weights/gp_weights.00110.pt \
 --vm_weights ./out/gppvae/weights/vm_weights.00110.pt 
